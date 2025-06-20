@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Тег FORM</title>
+</head>
+<body>
+
+<form action="http://localhost:8080/homeWork03-1.0-SNAPSHOT/form" method="POST">
+    <p><b>Ваш любимый исполнитель?</b></p>
+    <p>
+        <input type="radio" name="singer" value="LinkinPark">LinkinPark<br>
+        <input type="radio" name="singer" value="Dead by Sunrise">Dead by Sunrise<br>
+        <input type="radio" name="singer" value="Grey Daze">Grey Daze
+    </p>
+
+    <p><b>Ваши любимые жанры? Выбери от трех до пяти, пожалуйста!</b></p>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; max-width: 600px;">
+        <label style="width: 45%;"><input type="checkbox" name="genre" value="альтернативный рок">альтернативный рок</label>
+        <label style="width: 45%;"><input type="checkbox" name="genre" value="ню-метал">ню-метал</label>
+        <label style="width: 45%;"><input type="checkbox" name="genre" value="альтернативный метал">альтернативный метал</label>
+        <label style="width: 45%;"><input type="checkbox" name="genre" value="электроник-рок">электроник-рок</label>
+        <label style="width: 45%;"><input type='checkbox' name='genre' value="постгранж">постгранж</label>
+        <label style='width: 45%;'><input type='checkbox' name='genre' value="хард-рок">хард-рок</label>
+        <label style='width: 45%;'><input type='checkbox' name='genre' value="поп-рок">поп-рок</label>
+        <label style='width: 45%;'><input type='checkbox' name='genre' value="rock">rock</label>
+        <label style='width: 45%;'><input type='checkbox' name='genre' value="панк-рок">панк-рок</label>
+        <label style='width: 45%;'><input type='checkbox' name='genre' value="хэви-металл">хэви-металл</label>
+    </div>
+
+    <p><b>Расскажите о себе?</b></p>
+    <textarea name='about'></textarea>
+
+    <br/><br/>
+    <input type="submit" value="Отправить"/>
+</form>
+
+</body>
+</html>
