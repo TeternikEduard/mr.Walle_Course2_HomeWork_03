@@ -19,7 +19,7 @@
     </c:forEach>
 
 
-    <p><b>А какие у Вас любимые жанры?</b></p>
+    <p><b>А какие у Вас любимые жанры? Выберите от 3 до 7, пожалуйста!</b></p>
     <c:forEach items="${genresList}" var="item">
         <p><input type="checkbox" name="genre" value="${item}">${item}</p>
     </c:forEach>

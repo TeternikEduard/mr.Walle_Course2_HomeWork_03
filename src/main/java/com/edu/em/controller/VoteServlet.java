@@ -29,7 +29,6 @@ public class VoteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("artistsList", artists);
         req.setAttribute("genresList", genres);
-
         req.getRequestDispatcher("/WEB-INF/template/form.jsp").forward(req, resp);
     }
 
@@ -39,6 +38,10 @@ public class VoteServlet extends HttpServlet {
         String[] genres = req.getParameterValues("genre");
         String about = req.getParameter("about");
 
+        if(artists == null || genres == null || genres.length < 3 || genres.length > 7 || about.isEmpty()){
+            resp.sendRedirect(req.getContextPath() + "/error");
+            return;
+        }
 
         Vote result = new Vote();
         result.setDtCreate(LocalDateTime.now());
